@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page3</title>
+    <link rel="stylesheet" href="ACTImageGallery-style.css">
+</head>
+<style>
+
+.top-btnn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+        }
+
+        .btn {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 8px;
+            font-size: 16px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* Darker Green */
+        }
+
+    .post {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40%;
+    border: 1px solid #dddddd;
+    border-radius: 20px;
+    background: url(./img3.jpg);
+    background-size: cover;
+    box-shadow: 0px 0px 15px;
+}
+
+.post1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40%;
+    border: 1px solid #dddddd;
+    border-radius: 20px;
+    background: url(./5.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 15px;
+}
+
+.post2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40%;
+    border: 1px solid #dddddd;
+    border-radius: 20px;
+    background: url(./6.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 15px;
+}
+</style>
+<body>
+
+    <div class="top-btnn">
+        <button onclick="goBack()" class="btn">Back</button>
+    </div>
+
+<header>
+    <h1>&copy; 4th QUARTER</h1>
+</header>
+
+<main>
+    <article class="post">
+        <h2></h2>
+        <p></p>
+    </article>
+
+    <article class="post1">
+        <h2></h2>
+        <p></p>
+    </article>
+
+    <article class="post2">
+        <h2></h2>
+        <p></p>
+    </article>
+
+    <div class="pagination">
+            <a href="page3.html">&laquo;</a>
+            <a href="ACT3ImageGallery.html">1</a>
+            <a href="page2.html">2</a>
+            <a href="page3.html">3</a>
+            <a href="page4.html" class="active">4</a>
+            <a href="page4.html">&raquo;</a>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <p><sup>2025</sup> Fahad Sumandar, All Right Reserved.</p>
+</footer>
+
+<script>
+    // JavaScript function to go back to the previous page
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>

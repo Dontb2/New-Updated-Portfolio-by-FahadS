@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login Validator</title>
+    <link rel="stylesheet" href="bouncingtext.css">
+    <link rel="stylesheet" href="flipcard.css">
+
+    <style>
+        .card-front {
+            background-color: transparent;
+            color: black;
+            padding: 20px;
+            width: 300px;
+        }
+
+        h2 {
+            display: flex;
+            position: absolute;
+            font-size: 10vh;
+            text-transform: uppercase;
+            top: .5px;
+        }
+
+        h1 {
+            padding: 20px;
+            text-align: left;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: skyblue;
+        }
+
+        .container {
+            padding: 50px;
+            background: url(abstract.jpg);
+            border-radius: 8px;
+            box-shadow: 0 0 15px;
+            border: 1px solid black;
+            width: 300px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 12px;
+            font-size: small;
+            border: 1px solid ;
+            border-radius: 4px;
+            background-color: lightcyan;
+            box-shadow: 0 0 5px ;
+        }
+
+        button {
+            padding: 5px;
+            background-color: lightskyblue;
+            color: black;
+            border: 1px solid;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: .5s ease;
+        }
+
+        button:hover {
+            border: 1px solid grey;
+            box-shadow: 0 0 5px black;
+            transform: scale(.2s);
+        }
+
+        #message {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .error {
+            text-shadow: 0 0 5px white;
+            color: red;
+        }
+
+        .success {
+            text-shadow: 0 0 5px white;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>
+        <span>W</span>
+        <span>E</span>
+        <span>L</span>
+        <span>C</span>
+        <span>O</span>
+        <span>M</span>
+        <span>E</span>
+        
+    </h2>
+    
+    <div class="card">
+        <div class="card-inner">
+        <div class="card-front">
+        <div>
+        <h3>Nice to see you again!</h3><br>
+        <span>Put the mouse in the card and will automatically flip it.</span>
+        </div>
+        </div>
+        <div class="card-back">
+        <div>
+
+    <div class="container">
+    <h1>LOG IN</h1>
+    
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Enter username">
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter password">
+    <br>
+    <button onclick="validateLogin()">Login</button>
+    
+    <p id="message"></p>
+
+    </div>
+
+    <script>
+        const correctUsername = "fahad";
+        const correctPassword = "fahad";
+
+        function validateLogin() {
+            event.preventDefault();  // Prevent form submission or link navigation
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const messageElement = document.getElementById('message');
+
+            // Check if fields are empty
+            if (username === "" || password === "") {
+                messageElement.innerText = "Please fill in both fields!";
+                messageElement.className = 'error';
+                return;
+            }
+
+            // Check username and password
+            if (username === correctUsername && password === correctPassword) {
+                messageElement.innerText = "Login successful! Redirecting...";
+                messageElement.className = 'success';
+
+                // Redirect to another page after a short delay
+                setTimeout(function() {
+                    window.location.href = "index.html";  // Redirect to your desired page
+                }, 2000); // 2-second delay
+            } else {
+                messageElement.innerText = "Invalid username or password!";
+                messageElement.className = 'error';
+            }
+        }
+    </script>
+
+</body>
+</html>
